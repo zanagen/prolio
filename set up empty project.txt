@@ -1,0 +1,46 @@
+CREATE A NEW PROJECT
+
+npx create-react-app prolio
+	creates a new folder called 'prolio' inside current directory
+	installs react, react-dom, react-scripts, cra-template
+	initializes git repository
+cd prolio
+	move into folder called 'prolio'
+npm start
+	runs local server and opens in browser with the link http://localhost:3000/
+
+EMPTY PROJECT
+
+vi src/App.js
+	opens file App.js in the src folder inside text editor
+	CHANGE CODE TO LOOK LIKE THE FOLLOWING
+		import React from 'react';
+		import './App.css';
+		function App() {
+		  return <></>;
+		}
+		export default App;
+[shift]zz
+	save and exit text editor
+rm src/logo.svg
+	delete logo file in src folder
+
+CREATE FILE STRUCTURE
+
+mkdir src/components
+	create new folder called 'components'
+	each component has a personal directory to store component file with stylesheets, images, tests, etc.
+mkdir src/components/App
+	create new folder called 'App'
+mv App.* components/App
+	move all App files into src/components/App folder
+	'*' selects all files starting with 'App.'
+vi src/index.js
+	opens file index.js in src folder inside text editor
+	CHANGE FILE LOCATION FOR App TO './components/App/App'
+		import React from 'react';
+		import ReactDOM from 'react-dom';
+		import './index.css';
+		import App from './components/App/App';
+[shift]zz
+	save and exit text editor

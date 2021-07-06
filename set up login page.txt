@@ -1,0 +1,61 @@
+BUILD LOGIN PAGE
+
+npm install react-router-dom
+	installs web version of React Router for use with React Native
+mkdir src/components/Dashboard
+mkdir src/components/Preferences
+	creates new folders 'Dashboard' and 'Preferences'
+vi src/components/Dashboard/Dashboard.js
+	creates file 'Dashboard.js' and opens in text editor
+	ADD FOLLOWING CODE
+		import React from 'react';
+		export default function Dashboard() {
+		  return(
+		    <h2>Dashboard</h2>
+		  );
+		}
+[shift]zz
+	save and exit text editor
+vi src/components/Preferences/Preferences.js
+	creates file 'Preferences.js' and opens in text editor
+	ADD FOLLOWING CODE
+		import React from 'react';
+		export default function Preferences() {
+		  return(
+		    <h2>Preferences</h2>
+		  );
+		}
+[shift]zz
+	save and exit text editor
+vi src/components/App/App.js
+	opens file 'App.js' in text editor
+	ADD FOLLOWING CODE TO IMPORT SECTION
+		import { BrowserRouter, Route, Switch } from 'react-router-dom';
+		import Dashboard from '../Dashboard/Dashboard';
+		import Preferences from '../Preferences/Preferences';
+	ADD FOLLOWING CODE TO return STATEMENT OF function App()
+		return (
+		    <div className="wrapper">
+		      <h1>Application</h1>
+		      <BrowserRouter>
+		        <Switch>
+        		  <Route path="/dashboard">
+		            <Dashboard />
+		          </Route>
+		          <Route path="/preferences">
+		            <Preferences />
+		          </Route>
+		        </Switch>
+		      </BrowserRouter>
+		    </div>
+		  );
+[shift]zz
+	save and exit text editor
+vi src/components/App/App.css
+	opens file 'App.css' in text editor
+	REPLACE ALL CODE WITH THE FOLLOWING
+		.wrapper {
+		    padding: 20px;
+		}
+[shift]zz
+	save and exit text editor
