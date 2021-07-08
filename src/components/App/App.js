@@ -9,6 +9,7 @@ import { AuthProvider } from '../../contexts/AuthContext';
 import Signup from "../Login/Signup";
 import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
+import UpdateProfile from '../Preferences/UpdateProfile';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <AuthProvider>
             <Switch>
               <PrivateRoute exact path="/" component={Dashboard} />
+							<PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
