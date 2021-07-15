@@ -20,7 +20,9 @@ import {
   faSearch,
   faBell,
   faUser,
-  faCog
+  faCog,
+  faQuestionCircle,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 

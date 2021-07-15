@@ -11,11 +11,12 @@ import "./Navbar.css";
 import {
   far,
   faEnvelope,
-  faBell,
+  faQuestionCircle,
   faUser,
   faUserCircle,
   faUserFriends,
   faCog,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProlioNavbar() {
@@ -38,11 +39,11 @@ export default function ProlioNavbar() {
               <FontAwesomeIcon icon={faEnvelope} className="icon2" size = '3x' color="#1954d8"/>
             </Nav.Link>
             <NavDropdown title = {<FontAwesomeIcon icon={faUserCircle} size = '3x' color="#1954d8"/>} id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/MyProfile">MyProfile</NavDropdown.Item>
-              <NavDropdown.Item href="/UpdateProfile">Settings</NavDropdown.Item>
-              <NavDropdown.Item href="/Help">Help</NavDropdown.Item>
+              <NavDropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</NavDropdown.Item>
+              <NavDropdown.Item href="/UpdateProfile"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
+              <NavDropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Login">Logout</NavDropdown.Item>
+              <NavDropdown.Item href="/Login"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         {/* </Container> */}
