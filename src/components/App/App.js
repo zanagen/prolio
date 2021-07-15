@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from '../Dashboard/Dashboard';
+import Home from '../Home/Home';
 import Preferences from '../Preferences/Preferences';
 import Login from '../Login/Login';
 import { Container } from 'react-bootstrap';
@@ -10,9 +11,32 @@ import Signup from "../Login/Signup";
 import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
 import UpdateProfile from '../Preferences/UpdateProfile';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faUserCircle,
+  faUserFriends,
+  faSearch,
+  faBell,
+  faUser,
+  faCog
+} from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
 
 
 function App() {
+  library.add(
+    fab,
+    faUserCircle,
+    faEnvelope,
+    faUserFriends,
+    faSearch,
+    faBell,
+    faUser,
+    far,
+    faCog,
+  );
   return (
     <Container
       className="d-flex align-items-center justify-content-center"
@@ -22,7 +46,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
+              <PrivateRoute exact path="/" component={Home} />
 							<PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />

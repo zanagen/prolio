@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Card, Button, Alert } from "react-bootstrap";
+import { Container, Card, Button, Alert } from "react-bootstrap";
 import { useAuth } from '../../contexts/AuthContext';
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, BrowserRouter as Router } from "react-router-dom";
+import ProlioNavbar from "../Navbar/Navbar";
 
 export default function Dashboard() {
   const [error, setError] = useState("")
@@ -20,7 +21,8 @@ export default function Dashboard() {
   }
 
   return (
-    <>
+    <Router>
+     <ProlioNavbar />
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Profile</h2>
@@ -36,6 +38,6 @@ export default function Dashboard() {
           Log Out
         </Button>
       </div>
-    </>
+    </Router>
   )
 }

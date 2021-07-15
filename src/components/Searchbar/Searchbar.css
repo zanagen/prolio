@@ -1,0 +1,24 @@
+.visually-hidden {
+    overflow: hidden;
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search {
+    border-radius: 10px;
+    width: 800px;
+    height: 40px;
+    font-size: 2rem;
+  }
+  
+  .button {
+    border-radius: 10px;
+    height: 55px;
+    width: 55px;
+    font-size: 2rem;
+    margin-left: 3rem;
+    margin-right: 0.5rem;
+  }
+  
