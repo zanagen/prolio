@@ -21,7 +21,7 @@ import {
 export default function ProlioNavbar() {
   return (
     <>
-      <Navbar bg="light" variant="light" fixed="top">
+      <Navbar bg="light" variant="light" fixed="top" color="#D3D3D3">
         {/* <Container> */}
           <Nav className="me-auto">
             <Nav.Link href="/Home">
@@ -38,7 +38,7 @@ export default function ProlioNavbar() {
               <FontAwesomeIcon icon={faEnvelope} className="icon2" size = '3x' color="#1954d8"/>
             </Nav.Link>
             <NavDropdown title = {<FontAwesomeIcon icon={faUserCircle} size = '3x' color="#1954d8"/>} id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/MyProfile">/MyProfile</NavDropdown.Item>
+              <NavDropdown.Item href="/MyProfile">MyProfile</NavDropdown.Item>
               <NavDropdown.Item href="/UpdateProfile">Settings</NavDropdown.Item>
               <NavDropdown.Item href="/Help">Help</NavDropdown.Item>
               <NavDropdown.Divider />
