@@ -59,7 +59,7 @@ export default function ProlioNavbar() {
               <NavDropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
               <NavDropdown.Divider />
               {error && <Alert variant="danger">{error}</Alert>}
-              <NavDropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}Email:</strong> {currentUser.email}</Button></NavDropdown.Item>
+              <NavDropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></NavDropdown.Item>
 
             </NavDropdown>
           </Nav>

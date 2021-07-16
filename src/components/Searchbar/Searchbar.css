@@ -8,9 +8,10 @@
   
   .search {
     border-radius: 10px;
-    width: 200px;
-    height: 40px;
+    width: 700px;
+    height: 55px;
     font-size: 2rem;
+    position: relative;
   }
   
   .button {
