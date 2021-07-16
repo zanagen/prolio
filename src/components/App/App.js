@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Dashboard from '../Dashboard/Dashboard';
+import Logout from '../Logout/Logout';
 import Home from '../Home/Home';
-import Preferences from '../Preferences/Preferences';
 import Login from '../Login/Login';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from '../../contexts/AuthContext';
 import Signup from "../Login/Signup";
 import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
-import UpdateProfile from '../Preferences/UpdateProfile';
+import Settings from '../Settings/Settings';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -21,8 +20,6 @@ import {
   faBell,
   faUser,
   faCog,
-  faQuestionCircle,
-  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
@@ -49,7 +46,8 @@ function App() {
           <AuthProvider>
             <Switch>
               <PrivateRoute exact path="/" component={Home} />
-							<PrivateRoute path="/update-profile" component={UpdateProfile} />
+							<PrivateRoute path="/Settings" component={Settings} />
+              <PrivateRoute path="/Logout" component={Logout} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />

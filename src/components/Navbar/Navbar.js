@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "../Searchbar/Searchbar";
 import SearchBarFilter from "../Searchbar/SearchbarFilter";
 import icon from "./icon.png";
+import Settings from "../Settings/Settings"
 import "./Navbar.css";
 import {
-  far,
   faEnvelope,
   faQuestionCircle,
   faUser,
@@ -40,10 +40,10 @@ export default function ProlioNavbar() {
             </Nav.Link>
             <NavDropdown title = {<FontAwesomeIcon icon={faUserCircle} size = '3x' color="#1954d8"/>} id="collasible-nav-dropdown">
               <NavDropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</NavDropdown.Item>
-              <NavDropdown.Item href="/UpdateProfile"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
+              <NavDropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
               <NavDropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Login"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</NavDropdown.Item>
+              <NavDropdown.Item href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         {/* </Container> */}
