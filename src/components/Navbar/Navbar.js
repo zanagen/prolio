@@ -1,13 +1,14 @@
-import React from "react";
 // import { Nav, NavLink, NavMenu, Logo } from "./NavbarElements";
+import React, { useState } from "react";
+import { useAuth } from '../../contexts/AuthContext';
+import { useHistory, BrowserRouter as Router } from "react-router-dom";
 import { Logo } from "./NavbarElements";
-import { Nav, NavDropdown } from "react-bootstrap";
+import { Nav, NavDropdown, Button, Alert } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "../Searchbar/Searchbar";
 import SearchBarFilter from "../Searchbar/SearchbarFilter";
 import icon from "./icon.png";
-import Settings from "../Settings/Settings"
 import "./Navbar.css";
 import {
   faEnvelope,
@@ -20,8 +21,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProlioNavbar() {
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+  const history = useHistory()
+
+  async function handleLogout() {
+    setError("")
+
+    try {
+      await logout()
+      history.push("/login")
+    } catch {
+      setError("Failed to log out")
+    }
+  }
   return (
-    <>
+    <Router>
       <Navbar bg="light" variant="light" fixed="top" color="#D3D3D3">
         {/* <Container> */}
           <Nav className="me-auto">
@@ -43,12 +58,14 @@ export default function ProlioNavbar() {
               <NavDropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
               <NavDropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Logout"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</NavDropdown.Item>
+              {error && <Alert variant="danger">{error}</Alert>}
+              <NavDropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}Email:</strong> {currentUser.email}</Button></NavDropdown.Item>
+
             </NavDropdown>
           </Nav>
         {/* </Container> */}
-      </Navbar>
-      </>
+        </Navbar>
+      </Router>
       )
     }
     //     <>
