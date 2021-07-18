@@ -8,7 +8,7 @@
   
   .search {
     border-radius: 10px;
-    width: 700px;
+    width: 800px;
     height: 55px;
     font-size: 2rem;
     position: relative;
@@ -19,7 +19,7 @@
     height: 55px;
     width: 55px;
     font-size: 2rem;
-    margin-left: 3rem;
+    margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
   
