@@ -2,20 +2,29 @@ import React, { useState } from "react";
 import { useAuth } from '../../contexts/AuthContext';
 import { useHistory, BrowserRouter as Router } from "react-router-dom";
 import { Logo } from "./NavbarElements";
-import { Container, Nav, NavDropdown, Button, Alert } from "react-bootstrap";
+import { Container, Button, Alert, Dropdown, ButtonGroup } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "../Searchbar/Searchbar";
+// Prolio logo
 import icon from "./icon.png";
 import "./Navbar.css";
 import {
+  // Messages - NavBar icon
   faEnvelope,
+  // Help - Navbar icon
   faQuestionCircle,
+  // My Profile - Navbar icon
   faUser,
+  // User Profile Dropdown Menu - Navbar icon
   faUserCircle,
+  // My Connections - Navbar icon
   faUserFriends,
+  // Settings - Navbar icon
   faCog,
+  // Logout - Navbar icon
   faSignOutAlt,
+  // Filter SearchBar - Navbar icon
   faFilter,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -25,8 +34,8 @@ export default function ProlioNavbar() {
   const history = useHistory()
   const styles = {
     searchButton: {
-        paddingTop: "0.25rem",
-        paddingBottom: "0.25rem",
+        paddingTop: "0.15rem",
+        paddingBottom: "0.15rem",
         paddingRight: "0.25rem",
         paddingLeft: "0.25rem"
     }
@@ -47,33 +56,55 @@ export default function ProlioNavbar() {
     <Router>
       <Navbar expand="xl" bg="light" variant="light" fixed="top" color="#D3D3D3">
         <Container fluid>
+
+          {/* Prolio logo */}
           <Navbar.Brand href="/home" className="img-container">
-            <Logo class="logo" src={icon} />
+            <Logo class="logo" src={icon} variant="outline-primary"/>
           </Navbar.Brand>
+
+          {/* Collapsable Navbar for varying screen sizes */}
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <NavDropdown title = {<FontAwesomeIcon icon={faFilter} size = '2x' color="#808080"/>} variant="Secondary" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/">Following</NavDropdown.Item>
-              <NavDropdown.Item href="/">Recents</NavDropdown.Item>
-              <NavDropdown.Item href="/">Job Posts</NavDropdown.Item>
-              <NavDropdown.Item href="/">Trending</NavDropdown.Item>
-            </NavDropdown>
+
+            {/* Filter Dropdown for SearchBar */}
+            <Dropdown as={ButtonGroup}>
+                <Button variant="outline-primary" className="buttons" style={styles.searchButton} size="lg">
+                  <FontAwesomeIcon icon={faFilter} size = '2x' color="#0E50E3"/>
+                </Button>
+              <Dropdown.Toggle variant="outline-primary" id="dropdown-split-basic" />
+              <Dropdown.Menu>
+                <Dropdown.Item href="/">Following</Dropdown.Item>
+                <Dropdown.Item href="/">Recents</Dropdown.Item>
+                <Dropdown.Item href="/">Job Posts</Dropdown.Item>
+                <Dropdown.Item href="/">Trending</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <SearchBar />
-            <Button href="/MyConnections" className="m-1" style={styles.searchButton} variant="outline-primary" size="lg">
-              <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
-            </Button>
-            <Button href="/Messages" className="m-1" style={styles.searchButton} variant="outline-primary" size="lg">
-              <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
-            </Button>
-            <NavDropdown title = {<FontAwesomeIcon icon={faUserCircle} size = '2x' color="#1954d8"/>} id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</NavDropdown.Item>
-              <NavDropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
-              <NavDropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
-              <NavDropdown.Divider />
-              {error && <Alert variant="danger">{error}</Alert>}
-              <NavDropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></NavDropdown.Item>
-              </NavDropdown>
-            </Navbar.Collapse>
+
+            {/* MyConnections, Messages Buttons */}
+              <Button href="/MyConnections" className="buttons" style={styles.searchButton} variant="outline-primary" size="lg">
+                <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
+              </Button>
+              <Button href="/Messages" className="buttons" style={styles.searchButton} variant="outline-primary" size="lg">
+                <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
+              </Button>
+
+              {/* User Profile Dropdown Menu */}
+              <Dropdown as={ButtonGroup}>
+                <Button variant="outline-primary" className="buttons" style={styles.searchButton} size="lg">
+                  <FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>
+                </Button>
+              <Dropdown.Toggle variant="outline-primary" id="dropdown-split-basic" />
+              <Dropdown.Menu>
+                <Dropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</Dropdown.Item>
+                <Dropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</Dropdown.Item>
+                <Dropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</Dropdown.Item>
+                <Dropdown.Divider />
+                {error && <Alert variant="danger">{error}</Alert>}
+                <Dropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              </Navbar.Collapse>
           </Container>
         </Navbar>
       </Router>

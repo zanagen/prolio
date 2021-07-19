@@ -1,15 +1,8 @@
-.icon1 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-.icon2 {
-    margin-left: 100px;
-    margin-right: 150px;
-}
+.buttons {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
 
-.collasible-nav-dropdown {
-    margin-left: 3rem;
-    margin-right: 3rem;
 }
 
 @media (max-width: 991px) {
