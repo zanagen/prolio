@@ -33,11 +33,15 @@ export default function ProlioNavbar() {
   const { currentUser, logout } = useAuth()
   const history = useHistory()
   const styles = {
+    // inner padding of buttons
     searchButton: {
         paddingTop: "0.15rem",
         paddingBottom: "0.15rem",
         paddingRight: "0.25rem",
-        paddingLeft: "0.25rem"
+        paddingLeft: "0.25rem",
+    },
+    navbarPad: {
+      marginTop: "-15px",
     }
   }
 
@@ -54,12 +58,12 @@ export default function ProlioNavbar() {
 
   return (
     <Router>
-      <Navbar expand="xl" bg="light" variant="light" fixed="top" color="#D3D3D3">
+      <Navbar expand="xl" bg="light" variant="light" fixed="top" color="#D3D3D3" style={styles.navbarPad}>
         <Container fluid>
 
           {/* Prolio logo */}
           <Navbar.Brand href="/home" className="img-container">
-            <Logo class="logo" src={icon} variant="outline-primary"/>
+            <Logo class="logo" src={icon} variant="outline-light"/>
           </Navbar.Brand>
 
           {/* Collapsable Navbar for varying screen sizes */}
@@ -68,11 +72,11 @@ export default function ProlioNavbar() {
 
             {/* Filter Dropdown for SearchBar */}
             <Dropdown as={ButtonGroup}>
-                <Button variant="outline-primary" className="buttons" style={styles.searchButton} size="lg">
+                <Button variant="outline-light" color="#0E50E3" style={styles.searchButton} size="lg">
                   <FontAwesomeIcon icon={faFilter} size = '2x' color="#0E50E3"/>
                 </Button>
-              <Dropdown.Toggle variant="outline-primary" id="dropdown-split-basic" />
-              <Dropdown.Menu>
+              <Dropdown.Toggle variant="outline-light" id="dropdown-split-basic" />
+              <Dropdown.Menu className="buttons">
                 <Dropdown.Item href="/">Following</Dropdown.Item>
                 <Dropdown.Item href="/">Recents</Dropdown.Item>
                 <Dropdown.Item href="/">Job Posts</Dropdown.Item>
@@ -82,28 +86,28 @@ export default function ProlioNavbar() {
             <SearchBar />
 
             {/* MyConnections, Messages Buttons */}
-              <Button href="/MyConnections" className="buttons" style={styles.searchButton} variant="outline-primary" size="lg">
+              <Button href="/MyConnections" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
               </Button>
-              <Button href="/Messages" className="buttons" style={styles.searchButton} variant="outline-primary" size="lg">
+              <Button href="/Messages" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
               </Button>
 
               {/* User Profile Dropdown Menu */}
               <Dropdown as={ButtonGroup}>
-                <Button variant="outline-primary" className="buttons" style={styles.searchButton} size="lg">
+                <Button variant="outline-light" className="buttons" style={styles.searchButton} size="lg">
                   <FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>
                 </Button>
-              <Dropdown.Toggle variant="outline-primary" id="dropdown-split-basic" />
-              <Dropdown.Menu>
-                <Dropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</Dropdown.Item>
-                <Dropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</Dropdown.Item>
-                <Dropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</Dropdown.Item>
-                <Dropdown.Divider />
-                {error && <Alert variant="danger">{error}</Alert>}
-                <Dropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+                <Dropdown.Toggle variant="outline-light" color="#1954d8" id="dropdown-split-basic" />
+                <Dropdown.Menu>
+                  <Dropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</Dropdown.Item>
+                  <Dropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</Dropdown.Item>
+                  <Dropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</Dropdown.Item>
+                  <Dropdown.Divider />
+                  {error && <Alert variant="danger">{error}</Alert>}
+                  <Dropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></Dropdown.Item>
+                </Dropdown.Menu> 
+              </Dropdown> 
               </Navbar.Collapse>
           </Container>
         </Navbar>

@@ -12,6 +12,7 @@
     height: 55px;
     font-size: 2rem;
     position: relative;
+    margin-left: 2 rem;
   }
   
   .button {
@@ -19,7 +20,7 @@
     height: 55px;
     width: 55px;
     font-size: 2rem;
-    margin-left: 0.5rem;
     margin-right: 0.5rem;
+    margin-left:0.1 rem;
   }
   

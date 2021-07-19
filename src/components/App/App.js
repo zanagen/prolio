@@ -17,7 +17,6 @@ import {
   faUserCircle,
   faUserFriends,
   faSearch,
-  faBell,
   faUser,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
@@ -31,10 +30,9 @@ function App() {
     faEnvelope,
     faUserFriends,
     faSearch,
-    faBell,
     faUser,
-    far,
     faCog,
+    far,
   );
   return (
     <Container

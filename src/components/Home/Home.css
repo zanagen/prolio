@@ -1,0 +1,16 @@
+.columns {
+    display: flex; /*flex: elements can move around relative to each other*/
+    overflow: auto; /*overflow: if text is bigger than box, move text below*/
+    column-width: 550px;
+  }
+  
+  .column {
+    padding: 10px; /*adds space around div 'column'*/
+    border: 2px solid black;
+  }
+  
+  .appContainer {
+    background: #a5a7bb;
+    margin-top: 100px;
+  }
+  
