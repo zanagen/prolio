@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { Form, Button, Card, Alert } from 'react-bootstrap';
+import { Container, Form, Button, Card, Alert, Row, Col } from 'react-bootstrap';
 import './Login.css';
+import LandingNavbar from "../LandingNavbar/LandingNavbar"
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from "react-router-dom"
 
@@ -28,8 +29,20 @@ export default function Login() {
     setLoading(false)
   }
 
+  
+
   return (
     <>
+    <Container>
+      <LandingNavbar/>
+    </Container>
+
+    <Container>
+      <h2 className="logoPhrase">
+        <strong>The work speaks for itself, now let it speak for you!</strong>
+      </h2>
+    </Container>
+
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
