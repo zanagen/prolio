@@ -26,6 +26,8 @@ import {
   faSignOutAlt,
   // Filter SearchBar - Navbar icon
   faFilter,
+  // Crowdfunding
+  faDollarSign,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProlioNavbar() {
@@ -41,7 +43,7 @@ export default function ProlioNavbar() {
         paddingLeft: "0.25rem",
     },
     navbarPad: {
-      marginTop: "-15px",
+      marginTop: "-5px",
     }
   }
 
@@ -62,7 +64,7 @@ export default function ProlioNavbar() {
         <Container fluid>
 
           {/* Prolio logo */}
-          <Navbar.Brand href="/home" className="img-container">
+          <Navbar.Brand href="/Home" className="img-container">
             <Logo class="logo" src={icon} variant="outline-light"/>
           </Navbar.Brand>
 
@@ -85,16 +87,19 @@ export default function ProlioNavbar() {
             </Dropdown>
             <SearchBar />
 
-            {/* MyConnections, Messages Buttons */}
+            {/* MyConnections, Messages Buttons, Crowdfunding */}
               <Button href="/MyConnections" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
               </Button>
               <Button href="/Messages" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
               </Button>
+              <Button href="/CrowdFund" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
+                <FontAwesomeIcon icon={faDollarSign} size = '2x' color="#1954d8"/>
+              </Button>
 
               {/* User Profile Dropdown Menu */}
-              <Dropdown as={ButtonGroup}>
+              <Dropdown as={ButtonGroup} clasName="buttons">
                 <Button variant="outline-light" className="buttons" style={styles.searchButton} size="lg">
                   <FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>
                 </Button>

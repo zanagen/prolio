@@ -10,6 +10,9 @@ import Signup from "../Login/Signup";
 import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
 import Settings from '../Settings/Settings';
+import CrowdFund from '../CrowdFund/CrowdFund';
+import Messages from '../Messages/Messages';
+import MyConnections from '../MyConnections/MyConnections'
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -19,6 +22,7 @@ import {
   faSearch,
   faUser,
   faCog,
+  faDollarSign,
 } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 
@@ -32,6 +36,7 @@ function App() {
     faSearch,
     faUser,
     faCog,
+    faDollarSign,
     far,
   );
   return (
@@ -43,7 +48,10 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" component={Home} />
+              <PrivateRoute exact path="/Home" component={Home} />
+              <PrivateRoute path="/MyConnections" component={MyConnections} />
+              <PrivateRoute path="/Messages" component={Messages} />
+              <PrivateRoute path="/CrowdFund" component={CrowdFund} />
 							<PrivateRoute path="/Settings" component={Settings} />
               <PrivateRoute path="/Logout" component={Logout} />
               <Route path="/signup" component={Signup} />

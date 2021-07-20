@@ -8,8 +8,8 @@
   
   .search {
     border-radius: 10px;
-    width: 800px;
-    height: 55px;
+    width: 80%;
+    height: 50%;
     font-size: 2rem;
     position: relative;
     margin-left: 2 rem;
@@ -17,8 +17,8 @@
   
   .button {
     border-radius: 10px;
-    height: 55px;
-    width: 55px;
+    height: 50%;
+    width: 15%;
     font-size: 2rem;
     margin-right: 0.5rem;
     margin-left:0.1 rem;
