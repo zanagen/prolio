@@ -1,22 +1,20 @@
 .likeButtonAndNumberContainer {
-    display: flex; /* gives flex context to stuff inside likeButtonContainer */
-    flex-flow: row nowrap; /* orders like button and number into rows and wraps tags into multi lines */
-    align-items: center; /* centers items along cross-axis */
-  }
-  
-  .likeButton {
-    color: #000fff;
-    background-color: white;
-    border-radius: 50%;
-  
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-    border: none;
-  }
-  
+  display: flex; /* gives flex context to stuff inside likeButtonContainer */
+  flex-flow: row nowrap; /* orders like button and number into rows and wraps tags into multi lines */
+  align-items: center; /* centers items along cross-axis */
+}
+
+.likeButton {
+  color: #000fff;
+  background-color: white;
+  border-radius: 50%;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+}
+
   .likeButton:hover {
-    background-color: #bfc4ff;
-    transition: 0.5s;
+      background-color: #bfc4ff;
+      transition: 0.5s;
   }
-  

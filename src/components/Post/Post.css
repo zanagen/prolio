@@ -1,55 +1,61 @@
 .userPost {
-    background: #ffffff; /* background of post */
-    border-radius: 10px; /* rounds all edges by # of px */
-    /* top left, top right, bottom right, bottom left */
-  
-    /* play with post size numbers later */
-    width: min-content;
-    height: min-content;
-  
-    padding: 10px;
-    margin: 10px;
-  }
-  
-  .userPostImageContainer {
-    padding-top: 5px;
-  }
-  
-  .userPostTextHeader {
-    display: flex; /* gives flex context to stuff inside tagContainer */
-    flex-wrap: nowrap; /* tags and like button on 1 line */
-    justify-content: space-between; /* aligns 2 things on left / right sides of the line */
-    align-items: center; /* centers items along cross-axis */
-  }
-  
-  .postDescriptionContainer {
-    display: flex; /* gives flex context to stuff inside tagContainer */
-    flex-wrap: nowrap; /* tags and like button on 1 line */
-    justify-content: space-between; /* moves items to opposite sides of the line */
-    align-items: center; /* centers items along cross-axis */
-  }
-  
-  .postTitle {
-    font-weight: bold;
-    font-size: 1.5em;
-  }
-  
-  .postDate {
-    font-weight: bold;
-  }
-  
-  .tagAndLikeContainer {
-    padding-top: 10px;
-    display: flex; /* gives flex context to stuff inside tagContainer */
-    flex-wrap: nowrap; /* tags and like button on 1 line */
-    justify-content: space-between; /* moves items to opposite sides of the line */
-    align-items: center; /* centers items along cross-axis */
-  }
-  
-  .tagContainer {
-    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-    display: flex; /* gives flex context to stuff inside tagContainer */
-    flex-flow: row wrap; /* orders tags into rows and wraps tags into multi lines */
-    /*margin: 10px; /* adds margin between tags section and edges of postContainer */
-  }
-  
+  background: #ffffff; /* background of post */
+  border-radius: 10px; /* rounds all edges by # of px */
+  /* top left, top right, bottom right, bottom left */
+  /* 
+ * play with post size numbers later
+ * need to standardize width of post to set size of images
+ */
+  width: min-content;
+  height: min-content;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+/* adds spacing between ProfileTag and post image */
+.userPostImageContainer {
+  padding-top: 5px;
+}
+
+/* aligns title and date text */
+.userPostTextHeader {
+  display: flex; /* gives flex context to stuff inside tagContainer */
+  flex-wrap: nowrap; /* tags and like button on 1 line */
+  justify-content: space-between; /* aligns 2 things on left / right sides of the line */
+  align-items: center; /* centers items along cross-axis */
+}
+
+.postTitle {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.postDate {
+  font-weight: bold;
+}
+
+/* aligns description and character count */
+.postDescriptionContainer {
+  display: flex; /* gives flex context to stuff inside tagContainer */
+  flex-wrap: nowrap; /* tags and like button on 1 line */
+  justify-content: space-between; /* moves items to opposite sides of the line */
+  align-items: center; /* centers items along cross-axis */
+}
+
+/* aligns tags and like button */
+.tagAndLikeContainer {
+  padding-top: 10px;
+  display: flex; /* gives flex context to stuff inside tagContainer */
+  flex-wrap: nowrap; /* tags and like button on 1 line */
+  justify-content: space-between; /* moves items to opposite sides of the line */
+  align-items: center; /* centers items along cross-axis */
+}
+
+/* aligns tags */
+.tagContainer {
+  /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  display: flex; /* gives flex context to stuff inside tagContainer */
+  flex-flow: nowrap; /* orders tags into rows and wraps tags into multi lines */
+  /*margin: 10px; /* adds margin between tags section and edges of postContainer */
+}

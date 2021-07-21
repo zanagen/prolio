@@ -41,6 +41,7 @@ export default function ProlioNavbar() {
         paddingBottom: "0.15rem",
         paddingRight: "0.25rem",
         paddingLeft: "0.25rem",
+        marginLeft: "5px",
     },
     navbarPad: {
       marginTop: "-5px",
@@ -78,7 +79,7 @@ export default function ProlioNavbar() {
                   <FontAwesomeIcon icon={faFilter} size = '2x' color="#0E50E3"/>
                 </Button>
               <Dropdown.Toggle variant="outline-light" id="dropdown-split-basic" />
-              <Dropdown.Menu className="buttons">
+              <Dropdown.Menu>
                 <Dropdown.Item href="/">Following</Dropdown.Item>
                 <Dropdown.Item href="/">Recents</Dropdown.Item>
                 <Dropdown.Item href="/">Job Posts</Dropdown.Item>
@@ -88,19 +89,19 @@ export default function ProlioNavbar() {
             <SearchBar />
 
             {/* MyConnections, Messages Buttons, Crowdfunding */}
-              <Button href="/MyConnections" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
+              <Button href="/MyConnections" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
               </Button>
-              <Button href="/Messages" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
+              <Button href="/Messages" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
               </Button>
-              <Button href="/CrowdFund" className="buttons" style={styles.searchButton} variant="outline-light" size="lg">
+              <Button href="/CrowdFund" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faDollarSign} size = '2x' color="#1954d8"/>
               </Button>
 
               {/* User Profile Dropdown Menu */}
-              <Dropdown as={ButtonGroup} clasName="buttons">
-                <Button variant="outline-light" className="buttons" style={styles.searchButton} size="lg">
+              <Dropdown as={ButtonGroup} >
+                <Button variant="outline-light" style={styles.searchButton} size="lg">
                   <FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>
                 </Button>
                 <Dropdown.Toggle variant="outline-light" color="#1954d8" id="dropdown-split-basic" />

@@ -1,11 +1,11 @@
 import "./Tag.css";
 
 function Tag(props) {
-  return (
-    <div className="tagText">
-      <span>#{props.name}</span>
-    </div>
-  );
+    return (
+        <div className="tagText">
+            <span>#{props.name}</span>
+        </div>
+    );
 }
 
 export default Tag;
