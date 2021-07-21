@@ -27,7 +27,7 @@ const pulledData1 = {
 const pulledData2 = {
     id: uuidv4(),
     username: "user1@gmail.com",
-    name: "Patrick",
+    name: "Patrick Star",
     jobTitle: "3D animator",
     profilePicSrc: person,
     userStatus: "green",
