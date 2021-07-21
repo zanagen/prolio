@@ -45,6 +45,7 @@ export default function ProlioNavbar() {
     },
     navbarPad: {
       marginTop: "-5px",
+      border: "2px solid black",
     }
   }
 
@@ -80,10 +81,10 @@ export default function ProlioNavbar() {
                 </Button>
               <Dropdown.Toggle variant="outline-light" id="dropdown-split-basic" />
               <Dropdown.Menu>
-                <Dropdown.Item href="/">Following</Dropdown.Item>
-                <Dropdown.Item href="/">Recents</Dropdown.Item>
-                <Dropdown.Item href="/">Job Posts</Dropdown.Item>
-                <Dropdown.Item href="/">Trending</Dropdown.Item>
+                <Dropdown.Item href="/Home">Following</Dropdown.Item>
+                <Dropdown.Item href="/Home">Recents</Dropdown.Item>
+                <Dropdown.Item href="/Home">Job Posts</Dropdown.Item>
+                <Dropdown.Item href="/Home">Trending</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <SearchBar />
