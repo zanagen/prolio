@@ -44,7 +44,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/Home" component={Home} />
+              <PrivateRoute exact path="/" component={Home} />
               <PrivateRoute path="/MyConnections" component={MyConnections} />
               <PrivateRoute path="/Messages" component={Messages} />
               <PrivateRoute path="/CrowdFund" component={CrowdFund} />

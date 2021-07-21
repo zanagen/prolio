@@ -1,4 +1,8 @@
 /* spacing between buttons */
+.buttons {
+	display: flex;
+	justify: space-between;
+}
 
 @media (max-width: 991px) {
     .navbar .navbar-brand {
