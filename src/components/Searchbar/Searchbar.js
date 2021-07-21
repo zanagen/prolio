@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchBar = () => (
   <form className="search_bar" action="/searches" method="get">
-    <button className="button" type="submit">
-      <FontAwesomeIcon icon="search" />
-    </button>
     <label htmlFor="header-search">
       <span className="visually-hidden"></span>
     </label>
@@ -15,6 +12,9 @@ const SearchBar = () => (
       placeholder="Search prolio posts"
       className="search"
     />
+    <button className="button" type="submit">
+      <FontAwesomeIcon icon="search" />
+    </button>
   </form>
 );
 

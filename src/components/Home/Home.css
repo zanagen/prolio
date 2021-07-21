@@ -1,0 +1,20 @@
+  .columns {
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 100px;
+    margin-top: 120px;
+}
+
+.homeSideBar {
+    border: 2px solid orange;
+    column-width: 400px;
+    margin-left: 100px;
+}
+
+.homeMainBar {
+    border: 2px solid green;
+    column-width: 550px;
+    margin-right: 100px;
+}
+  

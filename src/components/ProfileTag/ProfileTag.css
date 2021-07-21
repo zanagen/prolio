@@ -1,0 +1,59 @@
+.profileTagContainer {
+  display: flex; /* gives flex context to stuff inside tagContainer */
+  flex-wrap: nowrap; /* profile pic and username on 1 line */
+  align-items: center; /* centers  */
+}
+
+.picsContainer {
+  display: flex; /* gives flex context to stuff inside tagContainer */
+  flex-wrap: nowrap; /* profile pic and user status on 1 line */
+  position: relative; /* reference for children's position */
+}
+
+.personImg {
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+/* green for online */
+.userStatusGreen {
+  height: 14px;
+  width: 14px;
+  background-color: rgb(1, 212, 1);
+  /* background-color: rgb(105, 105, 105); /* gray when inactive */
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute; /* references position based on picsContainer */
+  top: 40px;
+  right: -2px;
+}
+
+/* red for offline */
+.userStatusRed {
+  height: 14px;
+  width: 14px;
+  background-color: rgb(212, 1, 1);
+  /* background-color: rgb(105, 105, 105); /* gray when inactive */
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute; /* references position based on picsContainer */
+  top: 40px;
+  right: -2px;
+}
+
+/* gray for inactive */
+.userStatusGray {
+  height: 14px;
+  width: 14px;
+  background-color: rgb(78, 78, 78);
+  /* background-color: rgb(105, 105, 105); /* gray when inactive */
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute; /* references position based on picsContainer */
+  top: 40px;
+  right: -2px;
+}
+
+.profileTextContainer {
+  padding-left: 5px;
+}

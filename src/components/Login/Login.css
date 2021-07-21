@@ -3,3 +3,23 @@
 	flex-direction: column;
 	align-items: center;
 }
+
+.logoPhrase {
+    text-align: center;
+    color: #1954d8;
+    font-family: Roboto;
+	margin-top: 30px;
+	margin-bottom: 20%;
+}
+
+.column {
+	float: left;
+}
+
+.left, .right {
+	width: 50vw;
+}
+
+.middle {
+	width: 50vw;
+}
