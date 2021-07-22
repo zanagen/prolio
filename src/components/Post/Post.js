@@ -1,35 +1,15 @@
 import React, { Component } from "react";
-//import "react-native-get-random-values";
-//import { v4 as uuidv4 } from "uuid";
 
 import "./Post.css";
 import ProfileTag from "../ProfileTag/ProfileTag";
-import Tag from "../Tag/Tag";
 import LikeButton from "../LikeButton/LikeButton";
+import TagGeneration from "../TagGeneration/TagGeneration";
 
 /*
 figure out how to pass data through multiple props
 user data = { name, title, profile pic, status }
 post data = { post image (including size), tags, number of likes }
 */
-
-/* keeps key of the new Tag and the Tag itself */
-function ListItem(props) {
-    return <div>{props.value}</div>;
-}
-
-/* takes in a list of strings, creates Tags from the list */
-function TagList(props) {
-    const tags = props.tags;
-    const tagList = tags.map((tag) =>
-        <ListItem key={tag.toString()} value={<Tag name={String(tag)} />} />
-    );
-    return (
-        <div className="tagContainer">
-            {tagList}
-        </div>
-    );
-}
 
 class Post extends Component {
     constructor(props) {
@@ -96,7 +76,7 @@ class Post extends Component {
                     </div>
                 </div>
                 <div className="tagAndLikeContainer">
-                    <TagList tags={this.state.postTags} />
+                    <TagGeneration tags={this.state.postTags} containerName="tagContainer" />
                     <LikeButton likes={this.state.numLikes} />
                 </div>
             </div>
