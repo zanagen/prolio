@@ -2,7 +2,7 @@ import "./Searchbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchBar = () => (
-  <form className="search_bar" action="/searches" method="get">
+  <form className="search_bar" action="/" method="get">
     <label htmlFor="header-search">
       <span className="visually-hidden"></span>
     </label>

@@ -11,6 +11,7 @@ import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
 import Settings from '../Settings/Settings';
 import CrowdFund from '../CrowdFund/CrowdFund';
+import MyProfile from "../MyProfile/MyProfile"
 import Messages from '../Messages/Messages';
 import MyConnections from '../MyConnections/MyConnections'
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -48,6 +49,7 @@ function App() {
               <PrivateRoute path="/MyConnections" component={MyConnections} />
               <PrivateRoute path="/Messages" component={Messages} />
               <PrivateRoute path="/CrowdFund" component={CrowdFund} />
+              <PrivateRoute path="/MyProfile" component={MyProfile} />
 							<PrivateRoute path="/Settings" component={Settings} />
               <PrivateRoute path="/Logout" component={Logout} />
               <Route path="/signup" component={Signup} />
