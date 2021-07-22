@@ -24,11 +24,12 @@
   flex-wrap: nowrap; /* tags and like button on 1 line */
   justify-content: space-between; /* aligns 2 things on left / right sides of the line */
   align-items: center; /* centers items along cross-axis */
+  margin-bottom: -10px;
 }
 
 .postTitle {
-  font-weight: bold;
-  font-size: 1.5em;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .postDate {
@@ -37,10 +38,16 @@
 
 /* aligns description and character count */
 .postDescriptionContainer {
-  display: flex; /* gives flex context to stuff inside tagContainer */
-  flex-wrap: nowrap; /* tags and like button on 1 line */
-  justify-content: space-between; /* moves items to opposite sides of the line */
-  align-items: center; /* centers items along cross-axis */
+    display: flex; /* gives flex context to stuff inside tagContainer */
+    flex-wrap: nowrap; /* tags and like button on 1 line */
+    justify-content: space-between; /* moves items to opposite sides of the line */
+    align-items: center; /* centers items along cross-axis */
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.postTextCharCount {
+    padding-right: 5px;
 }
 
 /* aligns tags and like button */

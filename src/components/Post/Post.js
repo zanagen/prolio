@@ -6,8 +6,6 @@ import "./Post.css";
 import ProfileTag from "../ProfileTag/ProfileTag";
 import Tag from "../Tag/Tag";
 import LikeButton from "../LikeButton/LikeButton";
-import postPic from "../postBackground.png";
-import person from "../person.png";
 
 /*
 figure out how to pass data through multiple props
@@ -79,7 +77,7 @@ class Post extends Component {
                             <span>{this.state.postTitle}</span>
                         </div>
                         <div className="postDate">
-                            <span>{this.state.postDate}</span>
+                            <span>{this.state.postDate}</span> {/*{this.state.postDate}*/}
                         </div>
                     </div>
 
@@ -91,8 +89,7 @@ class Post extends Component {
                         </div>
 
                         <div className="postText">
-                            postDescriptionLength
-              <span>/250</span>
+                            <span>{String(this.state.postDescription).length}/250</span>
                         </div>
                     </div>
                 </div>
