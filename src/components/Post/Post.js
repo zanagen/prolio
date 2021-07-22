@@ -13,21 +13,23 @@ user data = { name, title, profile pic, status }
 post data = { post image (including size), tags, number of likes }
 */
 
-/*
-will need to play around with pic size
-*/
-
-/*
-function NewTag(props) {
-  return <Tag name={props.name} />;
+/* keeps key of the new Tag and the Tag itself */
+function ListItem(props) {
+    return <div>{props.value}</div>;
 }
 
-function postDescriptionLength(props){
-  let pDL = {props}.length;
-  return <span>pDL/250</span>
+/* takes in a list of strings, creates Tags from the list */
+function TagList(props) {
+    const tags = props.tags;
+    const tagList = tags.map((tag) =>
+        <ListItem key={tag.toString()} value={<Tag name={String(tag)} />} />
+    );
+    return (
+        <div className="tagContainer">
+            {tagList}
+        </div>
+    );
 }
-
-*/
 
 class Post extends Component {
     constructor(props) {
@@ -94,82 +96,12 @@ class Post extends Component {
                     </div>
                 </div>
                 <div className="tagAndLikeContainer">
-                    <div className="tagContainer">
-                        <Tag name="AdobeXD" />
-                        <Tag name="Discord" />
-                        <Tag name="Slack" />
-                        <Tag name="OtherDesigns" />
-                        <Tag name="etc." />
-                    </div>
+                    <TagList tags={this.state.postTags} />
                     <LikeButton likes={this.state.numLikes} />
                 </div>
             </div>
         );
     }
 }
-
-/*
-function Post(props) {
-  return (
-    <div className="userPost">
-      <div className="userProfileContainer">
-        <ProfileTag
-          name="Spongebob Squarepants"
-          title="3D artist"
-          userPic={person}
-          userStatus="green" //green for online, red for offline
-        />
-      </div>
-
-      <div className="userPostImageContainer">
-        <img
-          alt="postImg"
-          className="postImg"
-          src={postPic}
-          width="500"
-          height="100"
-        />
-      </div>
-
-      <div className="userPostTextContainer">
-        <div className="userPostTextHeader">
-          <div className="postTitle">
-            <span>3D animated new york city</span>
-          </div>
-          <div className="postDate">
-            <span>August 6, 2020</span>
-          </div>
-        </div>
-
-        <hr />
-
-        <div className="postDescriptionContainer">
-          <div className="postTextCharCount">
-            <span>
-              For the 3D designathon this weekend, my team created a
-              3-dimensional version on new york city to commemorate stuff.
-            </span>
-          </div>
-
-          <div className="postText">
-            <span>115/250</span>
-          </div>
-        </div>
-      </div>
-      <div className="tagAndLikeContainer">
-        <div className="tagContainer">
-          <Tag name="AdobeXD" />
-          <Tag name="Discord" />
-          <Tag name="Slack" />
-          <Tag name="OtherDesigns" />
-          <Tag name="etc." />
-        </div>
-        <LikeButton likes={150} />
-      </div>
-    </div>
-  );
-}
-
-*/
 
 export default Post;
