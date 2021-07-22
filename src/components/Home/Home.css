@@ -13,17 +13,18 @@
 
 .homeFeaturedCreators {
     border: 2px solid green;
+    background: white;
 }
 
 .homePopularTags {
     border: 2px solid blue;
+    background: white;
 
     columns: 190px 2;
     column-count: 2;
     column-gap: 20px;
     column-rule: 5px solid black;
     column-width: 180px;
-
     /*display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
