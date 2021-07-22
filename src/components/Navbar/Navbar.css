@@ -1,7 +1,10 @@
 /* spacing between buttons */
+.buttonContainer {
+	display:flex;
+}
 .buttons {
-	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: baseline;
 }
 
 @media (max-width: 991px) {

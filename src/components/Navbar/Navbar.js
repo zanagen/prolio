@@ -82,8 +82,11 @@ export default function ProlioNavbar() {
               <NavDropdown.Item href="/">Trending</NavDropdown.Item>
             </NavDropdown>
 
+
              <SearchBar />
 
+
+          <div className="buttonContainer">
             {/* MyConnections, Messages Buttons, Crowdfunding */}
             <div className="buttons">
               <Button href="/MyConnections" style={styles.searchButton} variant="outline-light" size="lg">
@@ -112,6 +115,7 @@ export default function ProlioNavbar() {
                   <NavDropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></NavDropdown.Item>
               </NavDropdown> 
             </div>
+          </div>
               </Navbar.Collapse>
           </Container>
         </Navbar>

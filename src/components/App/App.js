@@ -11,7 +11,7 @@ import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
 import Settings from '../Settings/Settings';
 import CrowdFund from '../CrowdFund/CrowdFund';
-import MyProfile from "../MyProfile/MyProfile"
+import MyProfile from "../MyProfile/MyProfile";
 import Messages from '../Messages/Messages';
 import MyConnections from '../MyConnections/MyConnections'
 import { library } from "@fortawesome/fontawesome-svg-core";
