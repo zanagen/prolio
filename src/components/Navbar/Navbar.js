@@ -88,11 +88,9 @@ export default function ProlioNavbar() {
 
           <div className="buttonContainer">
             {/* MyConnections, Messages Buttons, Crowdfunding */}
-            <div className="buttons">
               <Button href="/MyConnections" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
               </Button>
-            </div>
             <div className="buttons">
               <Button href="/Messages" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
@@ -107,12 +105,12 @@ export default function ProlioNavbar() {
               {/* User Profile Dropdown Menu */}
             <div className="buttons">
               <NavDropdown title={<FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>} id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</NavDropdown.Item>
-                  <NavDropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
-                  <NavDropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
+                  <NavDropdown.Item href="/MyProfile" size="sm"><FontAwesomeIcon icon={faUser} /> MyProfile</NavDropdown.Item>
+                  <NavDropdown.Item href="/Settings" size="sm"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
+                  <NavDropdown.Item href="/Help" size="sm"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
                   <NavDropdown.Divider />
                   {error && <Alert variant="danger">{error}</Alert>}
-                  <NavDropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></NavDropdown.Item>
+                  <NavDropdown.Item size="sm"><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></NavDropdown.Item>
               </NavDropdown> 
             </div>
           </div>
