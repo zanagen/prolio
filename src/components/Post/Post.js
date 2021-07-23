@@ -36,14 +36,12 @@ class Post extends Component {
         return (
             <div className="userPost">
                 <div>Post ID: {this.state.id}</div>
-                <div className="userProfileContainer">
-                    <ProfileTag
-                        name={this.state.name}
-                        title={this.state.jobTitle}
-                        userPic={this.state.profilePicSrc}
-                        userStatus={this.state.userStatus} // green for online, red for offline, gray for inactive
-                    />
-                </div>
+                <ProfileTag
+                    name={this.state.name}
+                    title={this.state.jobTitle}
+                    userPic={this.state.profilePicSrc}
+                    userStatus={this.state.userStatus} // green for online, red for offline, gray for inactive
+                />
                 <div className="userPostImageContainer">
                     <img
                         alt="postImg"
