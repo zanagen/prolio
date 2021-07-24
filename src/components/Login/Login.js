@@ -37,9 +37,16 @@ export default function Login() {
     <Container>
       <LandingNavbar/>
     </Container>
+    <div class="bannerTop"
+          style={{
+            backgroundImage: 'url('+image+')',
+            height: "20vh",
+          }}
+          >    
+    </div>
 
       <div class="login">
-        <Container style={{ maxWidth: "400px"}}>
+        <Container style={{ maxWidth: "400px"}}>   
           <h2 className="logoPhrase">
             <strong>The work speaks for itself, now let it speak for you!</strong>
           </h2>
@@ -71,14 +78,13 @@ export default function Login() {
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
         </div>
-
-      <div class="banner"
+        <div class="banner"
           style={{
             backgroundImage: 'url('+image+')',
-            height: "100vh",
+            height: "20vh",
           }}
-          >       
-       </div>
+          >    
+        </div>
 
     </>
   )

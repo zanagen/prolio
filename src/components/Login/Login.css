@@ -1,8 +1,11 @@
 .login {
 	width: 400px;
 	margin-left: 35%;
-	margin-top: 9%;
 } 
+
+.bannerTop {
+	margin-top: 3%;
+}
 
 .logoPhrase {
     text-align: center;
