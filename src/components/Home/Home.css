@@ -8,7 +8,7 @@
 
 .homeSideBar {
     border: 2px solid orange;
-    column-width: 400px;
+    width: 390px;
 }
 
 .homeFeaturedCreators {
@@ -16,19 +16,24 @@
     background: white;
 }
 
+.homeSideBarText {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.homeSideBarBreak {
+    height: 50px;
+}
+
 .homePopularTags {
     border: 2px solid blue;
     background: white;
 
-    columns: 190px 2;
+    columns: 150px 2;
     column-count: 2;
     column-gap: 20px;
     column-rule: 5px solid black;
     column-width: 180px;
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-around;*/
 }
 
 .homeMainBar {

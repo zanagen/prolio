@@ -5,6 +5,8 @@ import ProlioNavbar from "../Navbar/Navbar";
 import Post from "../Post/Post";
 import "./Home.css";
 import TagGeneration from "../TagGeneration/TagGeneration";
+import ProfileTagGeneration from "../ProfileTagGeneration/ProfileTagGeneration";
+import NewPost from "../NewPost/NewPost";
 
 import postPic from "../postBackground.png";
 import person from "../person.png";
@@ -57,7 +59,42 @@ const post3 = {
     numLikes: 2
 };
 
-const popularTags = ["WorkingFromHome", "Art", "2D-Art"];
+const popularTags = [
+    "WorkingFromHome",
+    "Art",
+    "2D-Art",
+    "3D-Art",
+    "Contractor",
+    "AdobeXD",
+    "Discord",
+    "Slack",
+    "OtherDesigns",
+    "etc."
+];
+
+const popularUsers = [
+    {
+        username: "zanagen@yahoo.com",
+        name: "Spongebob Squarepants",
+        jobTitle: "3D animator",
+        profilePicSrc: person,
+        userStatus: "red"
+    },
+    {
+        username: "user1@gmail.com",
+        name: "Patrick Star",
+        jobTitle: "3D animator",
+        profilePicSrc: person,
+        userStatus: "green"
+    },
+    {
+        username: "user55@gmail.com",
+        name: "Squidward Tentacles",
+        jobTitle: "Supporting Artist",
+        profilePicSrc: person,
+        userStatus: "gray"
+    }
+];
 
 function Home() {
     return (
@@ -66,11 +103,17 @@ function Home() {
             <div className="columns">
                 <div className="homeSideBar">
                     <div className="homeFeaturedCreators">
-                        <p>hello world</p>
+                        <span className="homeSideBarText">Featured Creators</span>
+                        <ProfileTagGeneration profileTags={popularUsers} />
                     </div>
-                    <TagGeneration tags={popularTags} containerName="homePopularTags" />
+                    <div className="homeSideBarBreak"></div>
+                    <div className="homePopularTagsContainer">
+                        <span className="homeSideBarText">Popular Tags</span>
+                        <TagGeneration tags={popularTags} containerName="homePopularTags" />
+                    </div>
                 </div>
                 <div className="homeMainBar">
+                    <NewPost />
                     <Post {...post1}/>
                     <Post {...post2}/>
                     <Post {...post3}/>

@@ -5,7 +5,7 @@ function ListItem(props) {
     return <div>{props.value}</div>;
 }
 
-/* takes in a list of strings, creates Tags from the list */
+/* takes in a list of strings, creates Tags from the list: ["", "", ""] */
 export default function TagList(props) {
     const tags = props.tags;
     const tagList = tags.map((tag) => (
