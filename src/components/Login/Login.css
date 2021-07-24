@@ -1,5 +1,17 @@
-.login-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.login {
+	width: 400px;
+	margin-left: 35%;
+} 
+
+.bannerTop {
+	margin-top: 3%;
 }
+
+.logoPhrase {
+    text-align: center;
+    color: #1954d8;
+    font-family: Roboto;
+	margin-top: 30px;
+	margin-bottom: 20%;
+}
+

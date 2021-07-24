@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { Form, Button, Card, Alert } from 'react-bootstrap';
+import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
 import './Login.css';
+import LandingNavbar from "../LandingNavbar/LandingNavbar"
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from "react-router-dom"
+import image from "./background.png"
 
 
 export default function Login() {
@@ -28,9 +30,29 @@ export default function Login() {
     setLoading(false)
   }
 
+  
+
   return (
     <>
-      <Card>
+    <Container>
+      <LandingNavbar/>
+    </Container>
+    <div class="bannerTop"
+          style={{
+            backgroundImage: 'url('+image+')',
+            height: "20vh",
+          }}
+          >    
+    </div>
+
+      <div class="login">
+        <Container style={{ maxWidth: "400px"}}>   
+          <h2 className="logoPhrase">
+            <strong>The work speaks for itself, now let it speak for you!</strong>
+          </h2>
+        </Container>
+
+        <Card style={{ maxWidth: "400px"}}>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -55,6 +77,15 @@ export default function Login() {
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
+        </div>
+        <div class="banner"
+          style={{
+            backgroundImage: 'url('+image+')',
+            height: "20vh",
+          }}
+          >    
+        </div>
+
     </>
   )
 }

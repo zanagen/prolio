@@ -1,14 +1,4 @@
-// import React, { useState } from "react"
-// import { render } from "react-dom"
-// import {storage } from "./firebase";
-
-
-// const ReactFirebaseFileUpload = () => {
-
-// }
-
 import axios from 'axios';
-
 import React,{Component} from 'react';
 
 class Upload extends Component {

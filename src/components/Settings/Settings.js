@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from '../../contexts/AuthContext';
 import { Link, useHistory } from "react-router-dom";
 import ProlioNavbar from "../Navbar/Navbar";
+import "./Settings.css";
 
 
 export default function Settings() {
@@ -46,9 +47,10 @@ export default function Settings() {
   return (
     <>
      <ProlioNavbar />
+     <div className="passwordContainer" style={{ maxWidth: "400px" }}>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+          <h2 className="text-center mb-4">Update Password</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -85,6 +87,7 @@ export default function Settings() {
       <div className="w-100 text-center mt-2">
         <Link to="/">Cancel</Link>
       </div>
+    </div>
     </>
   )
 }
