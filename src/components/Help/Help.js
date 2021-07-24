@@ -1,14 +1,13 @@
 import React from "react";
 import ProlioNavbar from "../Navbar/Navbar";
-import "../Help/Help";
+import "./Help.css";
 
-
-export default function Messages() {
+export default function Help() {
     return (
         <>
             <ProlioNavbar />
             <div className="title" style={{ maxWidth: "400px" }}>
-                <h1>Messages</h1>
+                <h1>Help</h1>
             </div>
         </>
       );

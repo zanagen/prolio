@@ -1,13 +1,15 @@
 import React from "react";
 import ProlioNavbar from "../Navbar/Navbar";
-import { Container } from "react-bootstrap";
+import "../Help/Help.css"
 
 
 export default function CrowdFund() {
-    return (
-        <>
+  return (
+    <>
         <ProlioNavbar />
-        <h1>Crowdfunding</h1>
-        </>
-      );
-    }
+        <div className="title" style={{ maxWidth: "400px" }}>
+            <h1>Crowdfunding</h1>
+        </div>
+    </>
+  );
+}

@@ -13,6 +13,7 @@ import Settings from '../Settings/Settings';
 import CrowdFund from '../CrowdFund/CrowdFund';
 import MyProfile from "../MyProfile/MyProfile";
 import Messages from '../Messages/Messages';
+import Help from '../Help/Help';
 import MyConnections from '../MyConnections/MyConnections'
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -51,6 +52,7 @@ function App() {
               <PrivateRoute path="/CrowdFund" component={CrowdFund} />
               <PrivateRoute path="/MyProfile" component={MyProfile} />
 							<PrivateRoute path="/Settings" component={Settings} />
+              <PrivateRoute path="/Help" component={Help} />
               <PrivateRoute path="/Logout" component={Logout} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Container, Form, Button, Card, Alert, Row, Col } from 'react-bootstrap';
+import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
 import './Login.css';
 import LandingNavbar from "../LandingNavbar/LandingNavbar"
 import { useAuth } from '../../contexts/AuthContext'
@@ -38,23 +38,14 @@ export default function Login() {
       <LandingNavbar/>
     </Container>
 
-          <div class="column left"
-            style={{
-              backgroundImage: 'url('+image+')',
-              // backgroundSize: "cover",
-              height: "20vh",
-              // width: "60vw",
-            }}
-            >
-          </div>
-
-        <div class="column middle">
-        <Container>
+      <div class="login">
+        <Container style={{ maxWidth: "400px"}}>
           <h2 className="logoPhrase">
             <strong>The work speaks for itself, now let it speak for you!</strong>
           </h2>
         </Container>
-        <Card>
+
+        <Card style={{ maxWidth: "400px"}}>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -81,15 +72,13 @@ export default function Login() {
       </div>
         </div>
 
-        <div class="column right"
+      <div class="banner"
           style={{
             backgroundImage: 'url('+image+')',
-            // backgroundSize: "cover",
-            height: "20vh",
-            // width: "90vw",
+            height: "100vh",
           }}
           >       
-        </div>
+       </div>
 
     </>
   )

@@ -87,10 +87,12 @@ export default function ProlioNavbar() {
 
 
           <div className="buttonContainer">
+            <div className="buttons">
             {/* MyConnections, Messages Buttons, Crowdfunding */}
               <Button href="/MyConnections" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
               </Button>
+              </div>
             <div className="buttons">
               <Button href="/Messages" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
