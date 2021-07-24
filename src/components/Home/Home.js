@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import ProlioNavbar from "../Navbar/Navbar";
+import Upload from "../Database/Upload"
 
 function Home() {
     return (
-        <Router>
+        <div>
           <ProlioNavbar />
-        </Router>
+          <Upload />
+        </div>
       );
     }
     
