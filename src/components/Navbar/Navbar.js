@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAuth } from '../../contexts/AuthContext';
 import { useHistory, BrowserRouter as Router } from "react-router-dom";
 import { Logo } from "./NavbarElements";
-import { Container, Button, Alert, Dropdown, ButtonGroup } from "react-bootstrap";
+import { Container, Button, Alert, NavDropdown } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "../Searchbar/Searchbar";
@@ -66,7 +66,7 @@ export default function ProlioNavbar() {
         <Container fluid>
 
           {/* Prolio logo */}
-          <Navbar.Brand href="/Home" className="img-container">
+          <Navbar.Brand href="/" className="img-container">
             <Logo class="logo" src={icon} variant="outline-light"/>
           </Navbar.Brand>
 
@@ -75,46 +75,47 @@ export default function ProlioNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
 
             {/* Filter Dropdown for SearchBar */}
-            <Dropdown as={ButtonGroup}>
-                <Button variant="outline-light" color="#0E50E3" style={styles.searchButton} size="lg">
-                  <FontAwesomeIcon icon={faFilter} size = '2x' color="#0E50E3"/>
-                </Button>
-              <Dropdown.Toggle variant="outline-light" id="dropdown-split-basic" />
-              <Dropdown.Menu>
-                <Dropdown.Item href="/Home">Following</Dropdown.Item>
-                <Dropdown.Item href="/Home">Recents</Dropdown.Item>
-                <Dropdown.Item href="/Home">Job Posts</Dropdown.Item>
-                <Dropdown.Item href="/Home">Trending</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <SearchBar />
+            <NavDropdown title={<FontAwesomeIcon icon={faFilter} size = '2x' color="#0E50E3"/>} id="basic-nav-dropdown">
+              <NavDropdown.Item href="/">Following</NavDropdown.Item>
+              <NavDropdown.Item href="/">Recents</NavDropdown.Item>
+              <NavDropdown.Item href="/">Job Posts</NavDropdown.Item>
+              <NavDropdown.Item href="/">Trending</NavDropdown.Item>
+            </NavDropdown>
 
+
+             <SearchBar />
+
+
+          <div className="buttonContainer">
+            <div className="buttons">
             {/* MyConnections, Messages Buttons, Crowdfunding */}
               <Button href="/MyConnections" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faUserFriends} size = '2x' color="#0E50E3"/>
               </Button>
+              </div>
+            <div className="buttons">
               <Button href="/Messages" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faEnvelope} size = '2x' color="#1954d8"/>
               </Button>
+            </div>
+            <div className="buttons">
               <Button href="/CrowdFund" style={styles.searchButton} variant="outline-light" size="lg">
                 <FontAwesomeIcon icon={faDollarSign} size = '2x' color="#1954d8"/>
               </Button>
+            </div>
 
               {/* User Profile Dropdown Menu */}
-              <Dropdown as={ButtonGroup} >
-                <Button variant="outline-light" style={styles.searchButton} size="lg">
-                  <FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>
-                </Button>
-                <Dropdown.Toggle variant="outline-light" color="#1954d8" id="dropdown-split-basic" />
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/MyProfile"><FontAwesomeIcon icon={faUser} /> MyProfile</Dropdown.Item>
-                  <Dropdown.Item href="/Settings"><FontAwesomeIcon icon={faCog} /> Settings</Dropdown.Item>
-                  <Dropdown.Item href="/Help"><FontAwesomeIcon icon={faQuestionCircle} /> Help</Dropdown.Item>
-                  <Dropdown.Divider />
+            <div className="buttons">
+              <NavDropdown title={<FontAwesomeIcon icon={faUserCircle} size = '2x' color="#0E50E3"/>} id="basic-nav-dropdown">
+                  <NavDropdown.Item href="/MyProfile" size="sm"><FontAwesomeIcon icon={faUser} /> MyProfile</NavDropdown.Item>
+                  <NavDropdown.Item href="/Settings" size="sm"><FontAwesomeIcon icon={faCog} /> Settings</NavDropdown.Item>
+                  <NavDropdown.Item href="/Help" size="sm"><FontAwesomeIcon icon={faQuestionCircle} /> Help</NavDropdown.Item>
+                  <NavDropdown.Divider />
                   {error && <Alert variant="danger">{error}</Alert>}
-                  <Dropdown.Item><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></Dropdown.Item>
-                </Dropdown.Menu> 
-              </Dropdown> 
+                  <NavDropdown.Item size="sm"><Button variant="link" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} /> Logout <strong>{" "}</strong> {currentUser.email}</Button></NavDropdown.Item>
+              </NavDropdown> 
+            </div>
+          </div>
               </Navbar.Collapse>
           </Container>
         </Navbar>

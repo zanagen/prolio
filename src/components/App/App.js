@@ -11,7 +11,9 @@ import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
 import Settings from '../Settings/Settings';
 import CrowdFund from '../CrowdFund/CrowdFund';
+import MyProfile from "../MyProfile/MyProfile";
 import Messages from '../Messages/Messages';
+import Help from '../Help/Help';
 import MyConnections from '../MyConnections/MyConnections'
 import MyProfile from '../MyProfile/MyProfile'
 import Tabs from '../Tabs/Tabs';
@@ -47,12 +49,13 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/Home" component={Home} />
+              <PrivateRoute exact path="/" component={Home} />
               <PrivateRoute path="/MyConnections" component={MyConnections} />
               <PrivateRoute path="/Messages" component={Messages} />
               <PrivateRoute path="/CrowdFund" component={CrowdFund} />
-                      <PrivateRoute path="/Settings" component={Settings} />
-                      <PrivateRoute path="/MyProfile" component={MyProfile} />
+              <PrivateRoute path="/MyProfile" component={MyProfile} />
+							<PrivateRoute path="/Settings" component={Settings} />
+              <PrivateRoute path="/Help" component={Help} />
               <PrivateRoute path="/Logout" component={Logout} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />

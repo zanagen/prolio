@@ -1,12 +1,15 @@
 import React from "react";
 import ProlioNavbar from "../Navbar/Navbar";
+import "../Help/Help.css";
 
 
 export default function MyConnections() {
     return (
         <>
             <ProlioNavbar />
-            <h1>My Connections</h1>
+            <div className="title" style={{ maxWidth: "400px" }}>
+                <h1>MyConnections</h1>
+            </div>
         </>
       );
     }

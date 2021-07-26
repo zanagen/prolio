@@ -1,9 +1,10 @@
 .tagText {
   border-radius: 10px; /* rounds corners */
-  margin: 5px; /* space between tag text */
+  margin-right: 10px; /* space between tag text */
   border: 2px solid black;
   padding-left: 5px;
   padding-right: 5px;
+  width: max-content;
 }
 
 .tagText:hover {
