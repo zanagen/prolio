@@ -1,0 +1,134 @@
+#profile {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /*border: 2px solid #000000;*/
+}
+
+.container {
+
+    max-width: 100%;
+
+}
+.header_area {
+    font-family: sans-serif;
+    /*text-align: center;*/
+    background-color: #a05a5a;
+    /*overflow: auto;*/
+    padding-bottom: 2em;
+    display: flex; /* gives flex context to stuff inside tagContainer */
+    flex-wrap: nowrap; /* tags and like button on 1 line */
+    justify-content: space-between; /* aligns 2 things on left / right sides of the line */
+    align-items: center; /* centers items along cross-axis */
+    margin-top: 6em;
+    max-width: 100%;
+    /*border: 2px solid #000000;*/
+}
+
+.icon_container {
+    margin: 1em .5em 0em 3em;/**/
+    /*background-color: #787878;
+  border-width: 10px;
+  border: 2px solid #000000;*/
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative; /*Reference for status's position*/
+}
+
+/*.profileimg {
+  border: 2px solid black;
+}*/
+
+.status_container {
+    height: 30px;
+    width: 30px;
+    background-color: #3eec38;
+    border-radius: 50%;
+    border: 5px solid #a05a5a;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    /* background-color: rgb(105, 105, 105); /* gray when inactive */
+}
+
+.icon_circle {
+    border-radius: 20%;
+    /*display: flex;*/
+    max-width: 200px;
+    float: left;
+    padding: 0em 1em 0em 1em;
+}
+
+.profile_info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; /* aligns 2 things on left / right sides of the line */
+    align-items: flex-start; /* centers items along cross-axis */
+    padding-top: 10px;
+}
+/*.status {
+
+  width: 50px;
+  top:10px;
+  
+}*/
+
+/*Buttons*/
+
+.buttons {
+    float: right;
+}
+
+.follow_button {
+    /*border: 2px solid black;*/
+}
+
+.header_info {
+    /*border: 2px solid black;*/
+    display: flex; /* gives flex context to stuff inside tagContainer */
+    flex-wrap: wrap; /* tags and like button on 1 line */
+    justify-content: flex-start; /* aligns 2 things on left / right sides of the line */
+    align-items: flex-start; /*centers items along cross-axis */
+    flex-direction: column;
+}
+
+.tag_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#profile_name {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#base_info {
+    font-weight: bold;
+    flex-grow: 4;
+    padding: 10px 10px 10px 0px;
+}
+
+#blurb {
+    padding: 0px 0px 10px 0px;
+}
+
+/* Stuff For The Tabs */
+
+.tab-list {
+    border-bottom: 1px solid #F8F8F8;
+    padding-left: 0;
+}
+
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+    background-color: white;
+    font-weight: bold;
+    /*border: solid #ccc;
+    border-width: 1px 1px 0 1px;*/
+}

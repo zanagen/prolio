@@ -15,6 +15,9 @@ import MyProfile from "../MyProfile/MyProfile";
 import Messages from '../Messages/Messages';
 import Help from '../Help/Help';
 import MyConnections from '../MyConnections/MyConnections'
+import MyProfile from '../MyProfile/MyProfile'
+import Tabs from '../Tabs/Tabs';
+import Tab from '../Tab/Tab';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -57,6 +60,7 @@ function App() {
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
+
             </Switch>
           </AuthProvider>
         </Router>
