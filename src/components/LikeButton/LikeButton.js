@@ -7,8 +7,6 @@ https://fontawesome.com/v5.15/icons/thumbs-up?style=solid
 icon for the like button
 */
 
-//const [count, setCount] = React.useState(this.state);
-
 /*
 React calls constructor(), 
   then render(), 
@@ -18,16 +16,11 @@ if component is removed from DOM,
   React calls componentWillUnmount() to stop updating
 */
 
-/*
-currently uses local state, will need to move state to parent (Post)
-*/
-
 class LikeButton extends Component {
     constructor(props) {
         super(props);
-        /* local state */
         this.state = {
-            clicks: props.likes /* 10 */,
+            clicks: props.likes,
             show: true
         };
     }
@@ -50,18 +43,4 @@ class LikeButton extends Component {
     }
 }
 
-/*
-function LikeButton(props) {
-  const [count, setCount] = React.useState(props.counter);
-
-  return (
-    <div className="likeButtonAndNumberContainer">
-      <button className="likeButton" onClick={() => setCount(count + 1)}>
-        <FontAwesomeIcon icon={faThumbsUp} />
-      </button>
-      <span>{count}</span>
-    </div>
-  );
-}
-*/
 export default LikeButton;
