@@ -5,6 +5,11 @@
     /*border: 2px solid #000000;*/
 }
 
+.container {
+
+    max-width: 100%;
+
+}
 .header_area {
     font-family: sans-serif;
     /*text-align: center;*/
@@ -15,7 +20,7 @@
     flex-wrap: nowrap; /* tags and like button on 1 line */
     justify-content: space-between; /* aligns 2 things on left / right sides of the line */
     align-items: center; /* centers items along cross-axis */
-    margin-top: 6em; 
+    margin-top: 6em;
     max-width: 100%;
     /*border: 2px solid #000000;*/
 }
@@ -105,4 +110,25 @@
 
 #blurb {
     padding: 0px 0px 10px 0px;
+}
+
+/* Stuff For The Tabs */
+
+.tab-list {
+    border-bottom: 1px solid #F8F8F8;
+    padding-left: 0;
+}
+
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+    background-color: white;
+    font-weight: bold;
+    /*border: solid #ccc;
+    border-width: 1px 1px 0 1px;*/
 }
