@@ -11,7 +11,6 @@ import ForgotPassword from "../Login/ForgotPassword";
 import PrivateRoute from "../Login/PrivateRoute";
 import Settings from '../Settings/Settings';
 import CrowdFund from '../CrowdFund/CrowdFund';
-import MyProfile from "../MyProfile/MyProfile";
 import Messages from '../Messages/Messages';
 import Help from '../Help/Help';
 import MyConnections from '../MyConnections/MyConnections'
