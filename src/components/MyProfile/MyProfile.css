@@ -39,7 +39,7 @@
   border: 2px solid black;
 }*/
 
-.status_container {
+.green {
     height: 30px;
     width: 30px;
     background-color: #3eec38;
@@ -49,6 +49,32 @@
     bottom: -5px;
     right: 10px;
     /* background-color: rgb(105, 105, 105); /* gray when inactive */
+}
+
+.red {
+    height: 30px;
+    width: 30px;
+    background-color: #ee1111;
+    border-radius: 50%;
+    border: 5px solid #a05a5a;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    /* background-color: rgb(105, 105, 105); /* gray when inactive */
+}
+
+.gray {
+
+    height: 30px;
+    width: 30px;
+    background-color: #787878;
+    border-radius: 50%;
+    border: 5px solid #a05a5a;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    /* background-color: rgb(105, 105, 105); /* gray when inactive */
+
 }
 
 .icon_circle {

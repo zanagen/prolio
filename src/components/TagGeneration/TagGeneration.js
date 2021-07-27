@@ -13,3 +13,12 @@ export default function TagList(props) {
     ));
     return <div className={props.containerName}>{tagList}</div>;
 }
+
+
+/* OUTPUT
+<div className="containerName">
+    <Tag name="blah" />
+    <Tag name="blah" />
+    <Tag name="blah" />
+</div>
+*/
