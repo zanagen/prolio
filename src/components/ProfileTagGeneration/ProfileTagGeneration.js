@@ -8,7 +8,6 @@ function ListItem(props) {
 /* takes in a list of strings, creates Tags from the list */
 export default function ProfileTagList(props) {
     const profileTags = props.profileTags;
-    console.log(profileTags);
     const profileTagList = profileTags.map((profileTag) => (
         <ListItem
             key={profileTag.username.toString()}
@@ -22,6 +21,6 @@ export default function ProfileTagList(props) {
             }
         />
     ));
-    console.log(profileTagList);
+    // console.log(profileTagList);
     return <div className={props.containerName}>{profileTagList}</div>;
 }
