@@ -107,7 +107,7 @@ function Home() {
             <div className="columns">
                 <div className="homeSideBar">
                     <div className="homeFeaturedCreators">
-                        <span className="homeSideBarText">Featured Creators</span>
+                        <span className="homeSideBarText">My Connections</span>
                         <ProfileTagGeneration profileTags={popularUsers} />
                     </div>
                     <div className="homeSideBarBreak"></div>

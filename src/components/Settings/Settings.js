@@ -42,6 +42,10 @@ export default function Settings() {
       .finally(() => {
         setLoading(false)
       })
+      console.log("user's email: "+currentUser.email)
+      console.log("user's display name: "+currentUser.displayName)
+      console.log("user's photo URL: "+currentUser.photoURL)
+      console.log("user's verified email: "+currentUser.emailVerified)
   }
 
   return (
@@ -50,7 +54,7 @@ export default function Settings() {
      <div className="passwordContainer" style={{ maxWidth: "400px" }}>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Password</h2>
+          <h2 className="text-center mb-4">Settings: Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">

@@ -66,10 +66,10 @@ export default function NewPost() {
             numLikes: 0
         })
         .then(() => {
-            console.log("Document successfully written!");
+            console.log("NewPost.js: Document successfully written!");
         })
         .catch((error) => {
-            console.error("Error writing document: ", error);
+            console.error("NewPost.js: Error writing document: ", error);
         });
         setFile(null);
         setTitle("");

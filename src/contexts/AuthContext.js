@@ -35,6 +35,17 @@ export function AuthProvider({ children }) {
     return currentUser.updatePassword(password)
   }
 
+  function updateProfile(fullName, photoURLRef) {
+    currentUser.updateProfile({
+      displayName: fullName,
+      photoURL: photoURLRef
+    }).then(() => {
+      console.log("AuthContext.js: Update successful");
+    }).catch((error) => {
+      console.log("AuthContext.js: An error occurred");
+    });
+  }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       setCurrentUser(user)
@@ -51,7 +62,8 @@ export function AuthProvider({ children }) {
     logout,
     resetPassword,
     updateEmail,
-    updatePassword
+    updatePassword,
+    updateProfile
   }
 
   return (
