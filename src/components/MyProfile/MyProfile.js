@@ -31,7 +31,7 @@ export default function MyProfile() {
       userID: currentUser.uid,
       name: currentUser.displayName,
       jobTitle: "Web Developer",
-      profilePicSrc: currentUser.photoURL,
+      profilePicSrc: icon, //currentUser.photoURL,
       userStatus: "green",
       profileTags: ["cat", "HTML", "Javascript", "Web Design"]
   };
