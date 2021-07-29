@@ -34,7 +34,7 @@ export default function Settings() {
     if (passwordRef.current.value) {
       promises.push(updatePassword(passwordRef.current.value))
     }
-    promises.push(updateProfile(fullName, profPic))
+    promises.push(updateProfile(fullName.current.value, profPic.current.value))
 
     Promise.all(promises)
       .then(() => {
@@ -98,7 +98,8 @@ export default function Settings() {
               <Form.Control
                 type="text"
                 ref={fullName}
-                placeholder="Enter full name"
+                required
+                defaultValue={currentUser.displayName}
               />
             </Form.Group>
             <Form.Group id="jobtitle">
@@ -113,7 +114,7 @@ export default function Settings() {
               <Button disabled={loading} className="w-100" type="submit">
                 Update
               </Button>
-            </Link>
+            </Link> 
           </Form>
         </Card.Body>
       </Card>

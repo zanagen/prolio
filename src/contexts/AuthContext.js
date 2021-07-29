@@ -39,11 +39,7 @@ export function AuthProvider({ children }) {
     return currentUser.updateProfile({
       displayName: fullName,
       photoURL: photoURLRef
-    }).then(() => {
-      console.log("AuthContext.js: Update successful");
-    }).catch((error) => {
-      console.log("AuthContext.js: An error occurred");
-    });
+    })
   }
 
   useEffect(() => {
