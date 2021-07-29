@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
+import { Form, Button, Card, Alert, Image } from "react-bootstrap";
 import { useAuth } from '../../contexts/AuthContext';
 import { Link, useHistory } from "react-router-dom";
 import ProlioNavbar from "../Navbar/Navbar";
@@ -66,6 +66,8 @@ export default function Settings() {
               <Form.Control 
                 type="file"
                 ref={profPic}
+                required
+                defaultValue={currentUser.photoURL}
                />
             </Form.Group>
             <Form.Group id="email">
