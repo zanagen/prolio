@@ -33,7 +33,7 @@ export default function MyProfile() {
       jobTitle: "Web Developer",
       profilePicSrc: icon, //currentUser.photoURL,
       userStatus: "green",
-      profileTags: ["cat", "HTML", "Javascript", "Web Design"]
+      profileTags: ["HTML", "CSS", "Javascript", "Web Design", "React", "Firebase-the-BEAST"]
   };
     return (
         <div id="profile">

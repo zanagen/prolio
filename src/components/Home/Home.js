@@ -20,15 +20,15 @@ const post1 = {
     id: uuidv4(),
     username: "zanagen@yahoo.com",
     name: "Spongebob Squarepants",
-    jobTitle: "3D artist",
+    jobTitle: "Fry cook",
     profilePicSrc: person,
     userStatus: "red",
     postPicSrc: postPic,
-    postTitle: "3D animated new york city",
+    postTitle: "Super Spatula Prototype",
     postDate: "Wed Jul 21 2021",
     postDescription:
-        "For the 3D designathon this weekend, my team created a 3-dimensional version on new york city to commemorate stuff.",
-    postTags: ["AdobeXD", "Discord", "Slack", "WorkingFromHome"],
+        "Designing a Super Spatula to make my fry cooking skillzzz even better!",
+    postTags: ["Fry-cook", "Spatula-Designs", "Krusty-Krab", "Food"],
     numLikes: 10
 };
 
@@ -41,8 +41,8 @@ const post2 = {
     userStatus: "green",
     postPicSrc: postPic,
     postTitle: "New Movie",
-    postDate: "Mon Mar 22 2021",
-    postDescription: "Finished working on a new 3D movie at XXX.",
+    postDate: "Thu Jul 29 2021",
+    postDescription: "Finished working on a new 3D movie from home.",
     postTags: ["3D-Art", "2D-Art", "Art", "WorkingFromHome"],
     numLikes: 50
 };
@@ -51,18 +51,20 @@ const post3 = {
     id: uuidv4(),
     username: "user55@gmail.com",
     name: "Squidward Tentacles",
-    jobTitle: "Supporting Artist",
+    jobTitle: "Cashier",
     profilePicSrc: person,
     userStatus: "gray",
     postPicSrc: postPic,
-    postTitle: "anime",
+    postTitle: "Krusty Krab Restaurant",
     postDate: "Fri Dec 5 2019",
-    postDescription: "Finished support on Anime.",
-    postTags: ["2D-Art", "Art", "Contractor", "WorkingFromHome"],
+    postDescription: "I started a new job while waiting to become a clarinet sensation.",
+    postTags: ["Krusty-Krab", "Cashier", "Food", "Hamburgers"],
     numLikes: 2
 };
 
 const popularTags = [
+    "Krusty-Krab",
+    "Food",
     "WorkingFromHome",
     "Art",
     "2D-Art",
@@ -72,14 +74,13 @@ const popularTags = [
     "Discord",
     "Slack",
     "OtherDesigns",
-    "etc."
 ];
 
 const popularUsers = [
     {
         username: "zanagen@yahoo.com",
         name: "Spongebob Squarepants",
-        jobTitle: "3D animator",
+        jobTitle: "Fry cook",
         profilePicSrc: person,
         userStatus: "red"
     },
@@ -93,7 +94,7 @@ const popularUsers = [
     {
         username: "user55@gmail.com",
         name: "Squidward Tentacles",
-        jobTitle: "Supporting Artist",
+        jobTitle: "Cashier",
         profilePicSrc: person,
         userStatus: "gray"
     }

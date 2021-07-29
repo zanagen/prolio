@@ -47,11 +47,11 @@ export default function NewPost() {
         const id = uuidv4(); // Creates a new random ID for every post
         db.collection("Test").doc(String(id)).set({ //UUID is hardcodded as string
             fileName: file.name, // name of file - ex: person.png
-            fileRef: await fileRef.getDownloadURL(), // storage URL location of file
-            postTitle: title,
-            postText: text,
-            postDate: new Date(),
-            numLikes: 0
+            fileRef: await fileRef.getDownloadURL()//, // storage URL location of file
+            // postTitle: title,
+            // postText: text,
+            // postDate: new Date(),
+            // numLikes: 0
         })
         .then(() => {
             console.log("NewPost.js: Document successfully written!");
