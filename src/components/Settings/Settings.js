@@ -34,11 +34,13 @@ export default function Settings() {
     if (passwordRef.current.value) {
       promises.push(updatePassword(passwordRef.current.value))
     }
-    promises.push(updateProfile(fullName.current.value, profPic.current.value))
+    if (fullName.current.value !== currentUser.displayName){
+      promises.push(updateProfile(fullName.current.value, profPic.current.value))
+    }
 
     Promise.all(promises)
       .then(() => {
-        history.push("/")
+        history.push("/MyProfile")
       })
       .catch(() => {
         setError("Failed to update account")
@@ -66,8 +68,6 @@ export default function Settings() {
               <Form.Control 
                 type="file"
                 ref={profPic}
-                required
-                defaultValue={currentUser.photoURL}
                />
             </Form.Group>
             <Form.Group id="email">
@@ -112,11 +112,9 @@ export default function Settings() {
                 placeholder="Enter Job Title"
               />
             </Form.Group>
-            <Link to="/MyProfile">
               <Button disabled={loading} className="w-100" type="submit">
                 Update
               </Button>
-            </Link> 
           </Form>
         </Card.Body>
       </Card>
