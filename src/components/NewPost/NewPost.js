@@ -6,18 +6,6 @@ import React, {useState} from 'react';
 import firebase from '../../firebase';
 import { v4 as uuidv4 } from 'uuid';
 
-
-/* faImage, faVideo */
-/*
-https://fontawesome.com/v5.15/icons/image?style=solid
-https://fontawesome.com/v5.15/icons/video?style=solid
-*/
-
-//<input type="text" id="newPostText" name="fname" maxLength="50" />
-//<input type="text" id="newPostText" name="fname" maxLength="250" />
-
-// https://github.com/satansdeer/firebase-albums/blob/master/src/NewPhoto.js
-
 const db = firebase.firestore();
 const storage = firebase.storage();
 //const currentUserID = firebase.auth().currentUser.uid; //get the current logged in files user's uid

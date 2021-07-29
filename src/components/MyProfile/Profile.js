@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import Tabs from "../Tabs/Tabs"; 
-import ProlioNavbar from "../Navbar/Navbar";
 
 import "./MyProfile.css";
 import TagGeneration from "../TagGeneration/TagGeneration";
@@ -25,9 +24,6 @@ export default function Profile(props) {
 
     return (
         <div id="profile">
-
-            {/* <ProlioNavbar /> */}
-
             <div className="header_area">
                 <div className="profile_info">
                     <div className="icon_container">
@@ -67,8 +63,6 @@ export default function Profile(props) {
                 <div label="Dashboard">
                     Graphs on statistics will go here, things like percentages of langauges/tags used and such.</div>
             </Tabs> 
-
-
         </div>
     );
 }
