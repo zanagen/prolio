@@ -35,7 +35,7 @@ class Post extends Component {
     render() {
         return (
             <div className="userPost">
-                <div>Post ID: {this.state.id}</div>
+                {/* <div>Post ID: {this.state.id}</div> */}
                 <ProfileTag
                     name={this.state.name}
                     title={this.state.jobTitle}

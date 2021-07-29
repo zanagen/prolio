@@ -7,11 +7,14 @@ import "./Home.css";
 import TagGeneration from "../TagGeneration/TagGeneration";
 import ProfileTagGeneration from "../ProfileTagGeneration/ProfileTagGeneration";
 import NewPost from "../NewPost/NewPost";
+import firebase from "../../firebase";
 
 import postPic from "../postBackground.png";
 import person from "../person.png";
 
 // .toDateString() --> Wed Jul 21 2021 --> USE THIS WHEN GENERATING NEW POSTS!!!
+
+
 
 const post1 = {
     id: uuidv4(),
@@ -97,13 +100,14 @@ const popularUsers = [
 ];
 
 function Home() {
+    const currentUserID = firebase.auth().currentUser.uid; //get the current logged in files user's uid
     return (
         <div className="homePageContainer">
             <ProlioNavbar />
             <div className="columns">
                 <div className="homeSideBar">
                     <div className="homeFeaturedCreators">
-                        <span className="homeSideBarText">Featured Creators</span>
+                        <span className="homeSideBarText">My Connections</span>
                         <ProfileTagGeneration profileTags={popularUsers} />
                     </div>
                     <div className="homeSideBarBreak"></div>
@@ -113,6 +117,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="homeMainBar">
+                    {/* {currentUserID} */}
                     <NewPost />
                     <Post {...post1}/>
                     <Post {...post2}/>

@@ -1,61 +1,18 @@
 .newPostContainer {
-    background: white;
-    border-radius: 10px;
-    margin: 10px;
-  }
+  background: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
   
-  .newPostTextBoxAndSubmitContainer {
-    border: 2px solid blue;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px;
-  }
-  
-  .newPostTextBoxesContainer {
-    border: 2px solid black;
-  }
-  
-  #newPostTitle {
-    min-height: 10px;
-  }
-  
-  .newPost_PostButtonContainer {
-    border: 2px solid green;
-  }
-  
-  .newPostButton {
-    color: #000fff;
-    background-color: white;
-    border-radius: 50%;
-  
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-    border: none;
-  }
-  
-  .newPostButton:hover {
-    background: #bfc4ff;
-    transition: 0.5s;
-  }
-  
-  .newPostAttachmentButtons {
-    border: 2px solid yellow;
-    padding: 10px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  
-  #img {
-    border: 2px solid red;
-    width: 100px;
-  }
-  
-  #vid {
-    border: 2px solid red;
-    width: 100px;
-  }
-  
+.newPostContainer>input {
+  display: none;
+}
+
+.browse {
+  border: 2px solid black;
+}
