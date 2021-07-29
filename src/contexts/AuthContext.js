@@ -36,7 +36,7 @@ export function AuthProvider({ children }) {
   }
 
   function updateProfile(fullName, photoURLRef) {
-    currentUser.updateProfile({
+    return currentUser.updateProfile({
       displayName: fullName,
       photoURL: photoURLRef
     }).then(() => {

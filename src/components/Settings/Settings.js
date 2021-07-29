@@ -10,7 +10,10 @@ export default function Settings() {
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
-  const { currentUser, updatePassword, updateEmail } = useAuth()
+  const jobTitle = useRef()
+  const fullName = useRef()
+  const profPic = useRef()
+  const { currentUser, updatePassword, updateEmail, updateProfile } = useAuth()
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
@@ -31,6 +34,7 @@ export default function Settings() {
     if (passwordRef.current.value) {
       promises.push(updatePassword(passwordRef.current.value))
     }
+    promises.push(updateProfile(fullName, profPic))
 
     Promise.all(promises)
       .then(() => {
@@ -57,6 +61,13 @@ export default function Settings() {
           <h2 className="text-center mb-4">Settings: Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Upload Profile Picture</Form.Label>
+              <Form.Control 
+                type="file"
+                ref={profPic}
+               />
+            </Form.Group>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control
@@ -71,7 +82,7 @@ export default function Settings() {
               <Form.Control
                 type="password"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Enter Password"
               />
             </Form.Group>
             <Form.Group id="password-confirm">
@@ -79,7 +90,23 @@ export default function Settings() {
               <Form.Control
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Make sure Password matches"
+              />
+            </Form.Group>
+            <Form.Group id="fullname">
+              <Form.Label>Full Name</Form.Label>
+              <Form.Control
+                type="text"
+                ref={fullName}
+                placeholder="Enter full name"
+              />
+            </Form.Group>
+            <Form.Group id="jobtitle">
+              <Form.Label>Job Title</Form.Label>
+              <Form.Control
+                type="text"
+                ref={jobTitle}
+                placeholder="Enter Job Title"
               />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
