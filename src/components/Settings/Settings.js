@@ -109,9 +109,11 @@ export default function Settings() {
                 placeholder="Enter Job Title"
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Update
-            </Button>
+            <Link to="/MyProfile">
+              <Button disabled={loading} className="w-100" type="submit">
+                Update
+              </Button>
+            </Link>
           </Form>
         </Card.Body>
       </Card>
